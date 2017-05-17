@@ -14,15 +14,15 @@ Source0:	https://github.com/yusuke/twitter4j/archive/%{version}/%{name}-%{versio
 BuildArch:	noarch
 
 BuildRequires:	maven-local
-#BuildRequires:  mvn(com.googlecode:kryo)
-BuildRequires:  mvn(commons-logging:commons-logging-api)
-BuildRequires:  mvn(junit:junit)
-BuildRequires:  mvn(log4j:log4j)
-BuildRequires:  mvn(org.apache.maven.plugins:maven-release-plugin)
-BuildRequires:  mvn(org.apache.maven.plugins:maven-source-plugin)
-BuildRequires:  mvn(org.codehaus.mojo:build-helper-maven-plugin)
-BuildRequires:  mvn(org.slf4j:slf4j-api)
-BuildRequires:  mvn(org.springframework:spring)
+#BuildRequires:	mvn(com.googlecode:kryo)
+BuildRequires:	mvn(commons-logging:commons-logging-api)
+BuildRequires:	mvn(junit:junit)
+BuildRequires:	mvn(log4j:log4j)
+BuildRequires:	mvn(org.apache.maven.plugins:maven-release-plugin)
+BuildRequires:	mvn(org.apache.maven.plugins:maven-source-plugin)
+BuildRequires:	mvn(org.codehaus.mojo:build-helper-maven-plugin)
+BuildRequires:	mvn(org.slf4j:slf4j-api)
+#BuildRequires:	mvn(org.springframework:spring)
 
 %description
 Twitter4J is a Twitter API binding library for the Java language.
@@ -52,7 +52,7 @@ find . -name "*.jar" -delete
 find . -name "*.class" -delete
 
 # Disable unbules due to unmeet dependencies
-%pom_disable_module twitter4j-appengine     #  com.google.appengine:appengine-api
+%pom_disable_module twitter4j-appengine #  com.google.appengine:appengine-api
 %pom_disable_module twitter4j-http2-support #  com.squareup.okhttp:okhttp
 
 %build
